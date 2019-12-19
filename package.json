@@ -1,0 +1,12 @@
+{
+  "name": "MM-MusicOnDemand-Bindings",
+  "version": "1.0.0",
+  "description": "This module act as a binding for the MusicOnDemand module with an http api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juzim/MMM-Api"
+  },
+  "license": "MIT",
+  "dependencies": {
+  }
+}
