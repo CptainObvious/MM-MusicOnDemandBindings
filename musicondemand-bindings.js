@@ -9,8 +9,4 @@ Module.register("MM-MusicOnDemand-Bindings", {
             this.sendSocketNotification("INITALIZE");
         }
     },
-
-    socketNotificationReceived: function(notification, payload, sender) {
-        this.sendNotification(notification, payload);
-    },
 });

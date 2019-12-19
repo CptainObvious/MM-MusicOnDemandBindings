@@ -10,15 +10,15 @@ Module = {
 
 module.exports = NodeHelper.create({
     // Subclass start method.
-    start: function() {
+    start: function () {
         console.log("Starting node helper for: " + this.name);
         this.actionNotification = new Map();
-        this.actionNotification.set("play", { payload: { message: "Play"}});
-        this.actionNotification.set("pause", { payload: { message: "Pause"}});
-        this.actionNotification.set("next", { payload: { message: "Next"}});
-        this.actionNotification.set("previous", { payload: { message: "Previous"}});
-        this.actionNotification.set("flow", { payload: { message: "Flow"}});
-        this.actionNotification.set("loved", { payload: { message: "Loved"}});
+        this.actionNotification.set("play", {payload: {message: "Play"}});
+        this.actionNotification.set("pause", {payload: {message: "Pause"}});
+        this.actionNotification.set("next", {payload: {message: "Next"}});
+        this.actionNotification.set("previous", {payload: {message: "Previous"}});
+        this.actionNotification.set("flow", {payload: {message: "Flow"}});
+        this.actionNotification.set("loved", {payload: {message: "Loved"}});
 
         this.expressApp.get("/mod", (req, res) => {
             var action = req.params.action;
@@ -31,7 +31,5 @@ module.exports = NodeHelper.create({
             }
             this.sendNotification("AtMusicOnDemand", notification.payload);
         });
-    });
-
-
-    });
+    }
+});
