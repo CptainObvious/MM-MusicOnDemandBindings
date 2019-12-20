@@ -8,5 +8,7 @@ Module.register("MM-MusicOnDemand-Bindings", {
         if (notification === "DOM_OBJECTS_CREATED") {
             this.sendSocketNotification("INITALIZE");
         }
+        console.log("Received notifications: " + notification);
+        this.sendNotification(notification, payload);
     },
 });

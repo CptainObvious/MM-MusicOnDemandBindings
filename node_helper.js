@@ -29,7 +29,7 @@ module.exports = NodeHelper.create({
             if (!notification) {
                 return res.status(200).send();
             }
-            this.sendNotification("AtMusicOnDemand", notification.payload);
+            this.sendSocketNotification("AtMusicOnDemand", notification.payload);
         });
     }
 });
